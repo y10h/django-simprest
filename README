@@ -1,0 +1,8 @@
+.. -*- mode: rst -*-
+
+===================
+ django-simplerest
+===================
+
+Simple library for building REST APIs.
+
