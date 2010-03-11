@@ -1,9 +1,9 @@
 import re
 from django.http import HttpResponse
-from rest.emitters import get_emitter
-from rest.utils import rc
-from rest.auth import NoAuth
-from rest.docs import registry
+from simprest.emitters import get_emitter
+from simprest.utils import rc
+from simprest.auth import NoAuth
+from simprest.docs import registry
 
 nonalpha_re = re.compile('[^a-z]')
 

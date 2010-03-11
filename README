@@ -1,8 +1,11 @@
 .. -*- mode: rst -*-
 
 ===================
- django-simplerest
+ django-simprest
 ===================
 
-Simple library for building REST APIs.
+Simple framework to define RESTful APIs on top of Django.
+
+Inspired by Piston but much simpler.
+
 
