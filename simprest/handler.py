@@ -10,6 +10,7 @@ nonalpha_re = re.compile('[^a-z]')
 class Rest(object):
     allowed_methods = ('GET', 'PUT', 'POST', 'DELETE')
     params = {}
+    emitter = 'json'
 
     def __init__(self, auth=None):
         self.auth = auth or NoAuth()
@@ -24,8 +25,8 @@ class Rest(object):
             not hasattr(self, method)):
             return rc.NOT_ALLOWED
 
-        emitter, ct = get_emitter(kwargs.pop('format',
-                                             request.GET.get('format')))
+        emitter, ct = get_emitter(
+            kwargs.pop('format', request.GET.get('format', self.emitter)))
         func = getattr(self, method)
         try:
             resp = func(request, *args, **kwargs)
